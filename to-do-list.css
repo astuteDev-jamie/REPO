@@ -5,7 +5,9 @@
             text-decoration: none;
         }
 
-        body{ height: 100vh;}
+        body{ 
+            
+        }
 
         div.header {
              color: deeppink;
@@ -126,6 +128,10 @@
             transform: translateX(3px);
         }
 
+        .ticked {
+            opacity: 0.5;
+        }
+
         .main {
             padding: 20px;
             display: flex;
@@ -144,20 +150,76 @@
 
         .task-bar .task{
             padding: 15px;
-            width: 500px;
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
+            width: 550px;
+            height: 55px;
+            display: flex;
+            flex-direction:column ;
+            justify-content: center;
             background-color:rgb(239, 248, 250);
-            border-left: 6px solid deeppink;
+            margin-left: 8px;
         }
 
-        .task-bar .clear {padding: 28px 8px;
+        .task div.spans{
+            display: flex;
+            justify-content: space-between;
+            font-size: small;
+            padding: 4px;
+        }
+
+        .task-bar .clear {padding:15px 8px;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
-            margin-left: 10px;
+            margin-left: 8px;
+            height: 55px;
             color: white;
             background-color: deeppink;
             font-weight: bold;
             cursor: pointer;
         }
-    
+        .task-bar .tick {padding: 15px 7px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            width: 50px;
+            margin-left: 10px;
+            height: 55px;
+            color: white;
+            background-color: deeppink;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        div.status {
+            position: fixed;
+            top: 385px;
+            left: 980px;
+            width: 220px;
+            padding: 15px;
+            background-color:rgb(239, 248, 250);
+            border-radius: 4px;
+            border: 2px solid deeppink;
+            /* height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around; */
+        }
+
+        div.status h4 {
+            padding: 1px;
+            margin-bottom: 3px;
+            border-bottom: 3px solid deeppink;
+        }
+
+        span#timer {
+            background-color: black;
+            color: white;
+            padding: 3px;
+            border-radius: 4px;
+        }
+        
+        div.status div{
+            background-color: black;
+            color: white;
+            padding: 3px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }

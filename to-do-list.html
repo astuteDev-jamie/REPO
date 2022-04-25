@@ -30,7 +30,7 @@
                     </div>
                     <p id="error"></p>
                     <div data-buttons style="flex-direction: row; justify-content: space-evenly;">
-                    <button id="add" onclick="createTaskbar()" onsubmit="preventDefault()">Add</button>
+                    <button id="add" type="submit">Add</button>
                     <button id="clean" type="reset">Clean</button>
                     </div>
                 </form>
@@ -38,6 +38,23 @@
         </nav>
     </div>
     <div class="main"></div>
+    <div class="status">
+        <h4>Tasks status</h4>
+        <div id="total">
+            <span>Total: </span>
+            <span id="total-value" style="font-weight: bolder;"></span>
+        </div>
+        <div id="pending">
+            <span>Pending: </span>
+            <span id="pending-value" style="font-weight: bolder;"></span>
+        </div>
+        <div id="completed">
+            <span>Completed: </span>
+            <span id="completed-value" style="font-weight: bolder;"></span>
+        </div>
+    </div>
+    </div>
 </body>
 
 </html>
+
