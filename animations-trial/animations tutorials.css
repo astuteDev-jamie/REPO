@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: rgba(104, 45, 66, 0.861);
+    padding:10px ;
+}
+
+div.container{
+    position: relative;
+    margin: 5px;
+    border: 1px solid black;
+    width: 60%;
+    height: 60%;
+}
+
+.container div{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.container div:first-child{
+    background-color: blue;
+    animation: mover1 2s ease-out infinite forwards ;
+}
+.container div:nth-child(2){
+    background-color: green;
+    animation: mover2 4s ease-in-out infinite forwards ;
+}
+
+@keyframes mover1 {
+
+    from{left: 0%;top: 0%;}
+    25% {left:75%;top:0%;background-color:orangered;}
+    50% {left: 75%;top:50%;background-color:purple;} 
+    75%{left:0%;top:50%;background-color:darkcyan ;}
+    to{top:0%;left: 0%;}
+    
+}
+@keyframes mover2 {
+
+    from{left: 0%;top: 0%;}
+    25% {left:75%;top:0%;background-color: brown;}
+    50% {left: 75%;top:50%;background-color: navy;} 
+    75%{left:0%;top:50%;background-color:blanchedalmond;}
+    to{top:0%;left: 0%;}
+    
+}
