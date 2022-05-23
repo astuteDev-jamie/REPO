@@ -1,0 +1,119 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+h1 {
+    padding: 15px;
+    border-bottom: 3px solid darkmagenta;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+div.container {
+    padding:10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    grid-gap: none;
+    
+}
+
+div[data-sections]{
+    position: relative;
+    border-radius: 1px;
+    height: 280px;
+    width: 400px;
+    
+    overflow: hidden;
+    
+}
+
+div[data-sections] figure {
+    width: 400%;
+    height:280px;
+    position: relative;
+    
+}
+
+div[data-sections] figure.nature{
+    animation: slider 28s ease-in  infinite normal;
+}
+div[data-sections] figure.cities{
+    animation: slider 24s ease-in-out  infinite normal;
+}
+div[data-sections] figure.monuments{
+    animation: slider 26s ease-in-out  infinite normal;
+}
+div[data-sections] figure.tech{
+    animation: slider1 29s ease-in-out  infinite alternate;
+}
+div[data-sections] figure.avi8{
+    animation: slider 25s ease-in  infinite alternate
+}
+div[data-sections] figure.travel{
+    animation: slider1 27s ease-in-out infinite alternate-reverse ;
+}
+
+
+div[data-sections] p {
+    font-weight: 100;
+    font-size: x-large;
+    position: absolute;
+    padding-left:20px;
+    background: transparent ;
+    z-index: 2;
+}
+
+.images{
+    
+    width: 400px;
+    height: 280px;
+    float: left;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+ 
+@keyframes slider {
+    
+    0%{left:0%}
+    10%{left:0%}
+    16%{left:-100%}
+    22%{left:-100%}
+    29%{left:-200%}
+    38%{left:-200%}
+    47%{left:-300%}
+    56%{left:-300%}
+    65%{left:-200%}
+    74%{left:-200%}
+    83%{left:-100%}
+    92%{left:-100%}
+    100%{left:0%}
+}
+@keyframes slider1 {
+    
+    0%{left:0%}
+    20%{left:0%}
+    35%{left:-100%}
+    45%{left:-100%}
+    50%{left:-200%}
+    60%{left:-200%}
+    65%{left:-300%}
+    75%{left:-300%}
+    80%{left:-400%}
+    100%{left:-400%}
+}
+
