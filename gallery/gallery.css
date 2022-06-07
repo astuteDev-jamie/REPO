@@ -9,8 +9,12 @@ body {
     padding: 30px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-   
+    flex-direction: column;  
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
@@ -20,23 +24,40 @@ h1 {
     margin-bottom: 10px;
 }
 
+nav {
+    margin:0px 80px;
+}
+
+h3 {
+    display: inline-block;
+    padding: 2px;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    color: aliceblue;
+    background-color: black;
+    padding: 2px 8px ;
+    margin: 2px;font-weight: bolder;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 div.container {
     padding:10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    grid-gap: none;
-    
+    margin: 0px 5%;
 }
 
-div[data-sections]{
+div.sections{
     position: relative;
     border-radius: 1px;
     height: 280px;
     width: 400px;
-    
     overflow: hidden;
-    
 }
 
 div[data-sections] figure {
@@ -53,16 +74,16 @@ div[data-sections] figure.cities{
     animation: slider 24s ease-in-out  infinite normal;
 }
 div[data-sections] figure.monuments{
-    animation: slider 26s ease-in-out  infinite normal;
+    animation: slider1 26s ease-in-out  infinite normal;
 }
 div[data-sections] figure.tech{
-    animation: slider1 29s ease-in-out  infinite alternate;
+    animation: slider 29s ease-in-out  infinite alternate;
 }
 div[data-sections] figure.avi8{
-    animation: slider 25s ease-in  infinite alternate
+    animation: slider1 25s ease-in  infinite alternate
 }
 div[data-sections] figure.travel{
-    animation: slider1 27s ease-in-out infinite alternate-reverse ;
+    animation: slider 27s ease-in-out infinite alternate-reverse ;
 }
 
 
@@ -76,7 +97,6 @@ div[data-sections] p {
 }
 
 .images{
-    
     width: 400px;
     height: 280px;
     float: left;
@@ -88,7 +108,6 @@ img {
 }
  
 @keyframes slider {
-    
     0%{left:0%}
     10%{left:0%}
     16%{left:-100%}
@@ -104,7 +123,6 @@ img {
     100%{left:0%}
 }
 @keyframes slider1 {
-    
     0%{left:0%}
     20%{left:0%}
     35%{left:-100%}
@@ -117,3 +135,127 @@ img {
     100%{left:-400%}
 }
 
+.secondview {
+    grid-template-columns: repeat(2, 1fr);
+    padding:10px;
+    display: grid;
+    justify-content: center;
+    grid-gap: none;
+    margin: 0px 20%;
+}
+
+.secondview-child {
+    width: 425px;
+    height: 310;
+    position: relative;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.images-2{
+    width: 425px;
+    height: 310px;
+    float: left;
+}
+
+@media (max-width:1218px) {
+    div.sections{
+        position: relative;
+        border-radius: 1px;
+        height: 280px;
+        width: 360px;
+        overflow: hidden;
+    }
+    nav {
+        margin:0px 35px;
+    }
+    .images{
+        width: 360px;
+        height: 280px;
+        float: left;
+    }
+}
+
+@media (max-width:1096px) {
+
+    div.container {
+        grid-template-columns: repeat(2, 1fr);
+        padding:10px;
+        display: grid;
+        justify-content: center;
+        grid-gap: none;
+        margin: 0px 20%;
+    }
+
+    div.sections{
+        width: 400px;
+        height: 290;
+        position: relative;
+        border-radius: 1px;
+        overflow: hidden;
+    }
+    nav {
+        display: none;
+    }
+    .images{
+        width: 400px;
+        height: 290px;
+        float: left;
+    }
+}
+
+@media (max-width:810px) {
+
+    div.container {
+        grid-template-columns: repeat(2, 1fr);
+        padding:10px;
+        display: grid;
+        justify-content: center;
+        grid-gap: none;
+        margin: 0px 20%;
+    }
+
+    div.sections{
+        width: 360px;
+        height: 270;
+        position: relative;
+        border-radius: 1px;
+        overflow: hidden;
+    }
+    nav {
+        margin:0px 5px;
+    }
+    .images{
+        width: 350px;
+        height: 270px;
+        float: left;
+    }
+}
+
+@media (max-width:718px) {
+
+    div.container {
+        grid-template-columns: repeat(1, 1fr);
+        padding:10px;
+        display: grid;
+        justify-content: center;
+        grid-gap: none;
+        margin: 0px 20%;
+    }
+
+    div.sections{
+        width: 410px;
+        height: 290;
+        position: relative;
+        border-radius: 1px;
+        overflow: hidden;
+    }
+    nav {
+        margin:0px 5px;
+    }
+    .images{
+        width: 410px;
+        height: 290px;
+        float: left;
+    }
+}
