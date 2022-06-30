@@ -47,11 +47,14 @@ document.addEventListener('click', (e)=>{
 })
 
 const formSpan= document.getElementById('error') 
-total.innerText=0 
+total.innerText=0
+completed.innerText=0
+pending.innerText=0
 
 
 form.addEventListener('submit',(e)=> {
     e.preventDefault()
+    formSpan.innerText=''
 
     const taskValue= task.value
     const dateValue= date.value
@@ -77,11 +80,11 @@ form.addEventListener('submit',(e)=> {
         const minute =Math.floor((timeleft%hours)/minutes)
         const second =Math.floor((timeleft%minutes)/seconds);
         
-       // document.querySelectorAll('span#timer').forEach(timer=>{timer.innerText = `${day} :${hour} :${minute} :${second}`})
         const spanner= document.createElement('span')
         spanner.innerText=  `${day} :${hour} :${minute} :${second}`
-
         return spanner.innerText
+        //I'M STUCK HERE, PLEASE IF YOU CAN MAKE THE TIMER COUNT
+        //WITHOUT INTERFERING WITH NEW TO-DOs I'LL APPRECIATE.
     }
     
     const timeFormat = d.toLocaleTimeString('en-GB',{
@@ -102,7 +105,7 @@ form.addEventListener('submit',(e)=> {
     mainSection.append(div)
     div.setAttribute('class','task-bar')
     div.innerHTML= 
-    `<p class="tick">Check<input type="checkbox" id="tick"></p>
+    `<p class="tick">Check</p>
     <div class="task">
         <h3>${taskValue}</h3>
         <div class="spans">
@@ -113,7 +116,9 @@ form.addEventListener('submit',(e)=> {
     </div>
     <p class="clear">Clear</p>`
 
-        total.innerText= document.querySelectorAll('div.task-bar').length
+        taskBarLength= document.querySelectorAll('div.task-bar').length
+        total.innerText=taskBarLength
+        pending.innerText=taskBarLength-completed.innerText
     
         document.querySelectorAll('input#tick').forEach(box=>{
         box.addEventListener('click',e=>{
@@ -124,6 +129,7 @@ form.addEventListener('submit',(e)=> {
     })
     
     // form.reset()
+    mainSection.lastChild.scrollIntoView(false)
     return
     }
     else error.push(`all fields are required`)
@@ -150,7 +156,10 @@ mainSection.addEventListener('click', e=>{
         clearTaskbar = e.target.closest('div.task-bar')
         mainSection.removeChild(clearTaskbar)
         let taskBarLength = document.querySelectorAll('div.task-bar').length
+        let tickedtotal= document.querySelectorAll('div.ticked').length
         total.innerText= taskBarLength
+        completed.innerText= tickedtotal
+        pending.innerText=taskBarLength-completed.innerText
         form.reset()
         
     }
