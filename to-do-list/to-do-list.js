@@ -128,7 +128,7 @@ form.addEventListener('submit',(e)=> {
         })
     })
     
-    // form.reset()
+    form.reset()
     mainSection.lastChild.scrollIntoView(false)
     return
     }

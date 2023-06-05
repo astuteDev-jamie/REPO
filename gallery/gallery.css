@@ -6,15 +6,12 @@
 }
 
 body {
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;  
+    height: 100vh;
+
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    height: 50px;
 }
 
 h1 {
@@ -24,238 +21,60 @@ h1 {
     margin-bottom: 10px;
 }
 
-nav {
-    margin:0px 80px;
-}
-
-h3 {
-    display: inline-block;
-    padding: 2px;
-}
-
-li {
-    display: inline-block;
-    list-style: none;
-    color: aliceblue;
-    background-color: black;
-    padding: 2px 8px ;
-    margin: 2px;font-weight: bolder;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-div.container {
-    padding:10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+main {
+    /* background-color: rgb(25, 24, 24); */
+    height: calc(100% - 150px);
+    display: flex;
     justify-content: center;
-    margin: 0px 5%;
+    align-items: center;
 }
 
-div.sections{
+.wrapper {
+    width: 200px;
+    height: 200px;
     position: relative;
-    border-radius: 1px;
-    height: 280px;
-    width: 400px;
-    overflow: hidden;
-}
-
-div[data-sections] figure {
-    width: 400%;
-    height:280px;
-    position: relative;
-    
-}
-
-div[data-sections] figure.nature{
-    animation: slider 28s ease-in  infinite normal;
-}
-div[data-sections] figure.cities{
-    animation: slider 24s ease-in-out  infinite normal;
-}
-div[data-sections] figure.monuments{
-    animation: slider1 26s ease-in-out  infinite normal;
-}
-div[data-sections] figure.tech{
-    animation: slider 29s ease-in-out  infinite alternate;
-}
-div[data-sections] figure.avi8{
-    animation: slider1 25s ease-in  infinite alternate
-}
-div[data-sections] figure.travel{
-    animation: slider 27s ease-in-out infinite alternate-reverse ;
-}
-
-
-div[data-sections] p {
-    font-weight: 100;
-    font-size: x-large;
+    transform-style: preserve-3d;
+    animation: spin 5s infinite linear;
+  }
+  
+  .sq {
     position: absolute;
-    padding-left:20px;
-    background: transparent ;
-    z-index: 2;
-}
-
-.images{
-    width: 400px;
-    height: 280px;
-    float: left;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-}
- 
-@keyframes slider {
-    0%{left:0%}
-    10%{left:0%}
-    16%{left:-100%}
-    22%{left:-100%}
-    29%{left:-200%}
-    38%{left:-200%}
-    47%{left:-300%}
-    56%{left:-300%}
-    65%{left:-200%}
-    74%{left:-200%}
-    83%{left:-100%}
-    92%{left:-100%}
-    100%{left:0%}
-}
-@keyframes slider1 {
-    0%{left:0%}
-    20%{left:0%}
-    35%{left:-100%}
-    45%{left:-100%}
-    50%{left:-200%}
-    60%{left:-200%}
-    65%{left:-300%}
-    75%{left:-300%}
-    80%{left:-400%}
-    100%{left:-400%}
-}
-
-.secondview {
-    grid-template-columns: repeat(2, 1fr);
-    padding:10px;
-    display: grid;
-    justify-content: center;
-    grid-gap: none;
-    margin: 0px 20%;
-}
-
-.secondview-child {
-    width: 425px;
-    height: 310;
-    position: relative;
-    border-radius: 1px;
-    overflow: hidden;
-}
-
-.images-2{
-    width: 425px;
-    height: 310px;
-    float: left;
-}
-
-@media (max-width:1218px) {
-    div.sections{
-        position: relative;
-        border-radius: 1px;
-        height: 280px;
-        width: 360px;
-        overflow: hidden;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+  }
+  
+  .front {
+    transform: translateZ(100px);
+  }
+  
+  .back {
+    transform: translateZ(-100px) rotateY(180deg);
+  }
+  
+  .top {
+    transform: rotateX(-90deg) translateZ(100px);
+  }
+  
+  .bottom {
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  
+  .left {
+    transform: rotateY(-90deg) translateZ(100px);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(100px);
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotateY(0deg);
     }
-    nav {
-        margin:0px 35px;
+    100% {
+      transform: rotateY(360deg);
     }
-    .images{
-        width: 360px;
-        height: 280px;
-        float: left;
-    }
-}
-
-@media (max-width:1096px) {
-
-    div.container {
-        grid-template-columns: repeat(2, 1fr);
-        padding:10px;
-        display: grid;
-        justify-content: center;
-        grid-gap: none;
-        margin: 0px 20%;
-    }
-
-    div.sections{
-        width: 400px;
-        height: 290;
-        position: relative;
-        border-radius: 1px;
-        overflow: hidden;
-    }
-    nav {
-        display: none;
-    }
-    .images{
-        width: 400px;
-        height: 290px;
-        float: left;
-    }
-}
-
-@media (max-width:810px) {
-
-    div.container {
-        grid-template-columns: repeat(2, 1fr);
-        padding:10px;
-        display: grid;
-        justify-content: center;
-        grid-gap: none;
-        margin: 0px 20%;
-    }
-
-    div.sections{
-        width: 360px;
-        height: 270;
-        position: relative;
-        border-radius: 1px;
-        overflow: hidden;
-    }
-    nav {
-        margin:0px 5px;
-    }
-    .images{
-        width: 350px;
-        height: 270px;
-        float: left;
-    }
-}
-
-@media (max-width:718px) {
-
-    div.container {
-        grid-template-columns: repeat(1, 1fr);
-        padding:10px;
-        display: grid;
-        justify-content: center;
-        grid-gap: none;
-        margin: 0px 20%;
-    }
-
-    div.sections{
-        width: 410px;
-        height: 290;
-        position: relative;
-        border-radius: 1px;
-        overflow: hidden;
-    }
-    nav {
-        margin:0px 5px;
-    }
-    .images{
-        width: 410px;
-        height: 290px;
-        float: left;
-    }
-}
+  }
+  
