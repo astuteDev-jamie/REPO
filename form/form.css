@@ -1,0 +1,170 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER SECTION */
+div.header {
+    background-color: rgb(245, 245, 245);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    display: inline-block;
+}
+
+.header nav {
+   
+    display: flex;
+    justify-content: space-between;
+}
+.header nav button {
+    
+    padding: 15px 15px;
+    margin: 10px 70px 10px 8px;
+    background-color: white;
+    border-radius: 3px;
+    border: solid 1px white;
+}
+
+.header nav p {
+    padding: 30px 0px;
+    font-size: xx-small;
+    font-weight: 100;
+}
+
+/* BODY/FORM SECTION */
+div.main {display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+}
+
+.main form {
+   padding: 0px;
+   background-color: white;
+   border-radius: 5px;
+   width: min-content;
+   margin-bottom: 20px;
+}
+
+.main form p {
+    padding:5px;
+    margin-bottom: 5px;
+}
+
+div[data-input-container]{
+    width: 400px;
+    
+    position: relative;
+    margin:  0px 5px 22px 5px;
+    padding:20px;
+    }
+
+
+form div.gridbox{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+div[data-input-container-grid]{
+    width: 185px;
+    
+    position: relative;
+    margin: 0px 15px 22px 5px;
+    padding:20px;
+}
+    
+div input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-left: 10px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    }
+    
+div > label {
+    position: absolute;
+    top: 25%;
+    padding-left: 10px;
+    transition: all 0.26s ease;
+    font-weight:lighter;
+    pointer-events: none;
+}
+
+/* input:focus {
+    border: 1px solid darkcyan;
+    border-radius: 4px;
+} */
+
+form button {
+    padding:6px 20px;
+    margin-left: 5px;
+}
+
+    /* CLASSLISTS */
+
+.focus{
+    border: 1px solid darkcyan;
+    border-radius: 4px; 
+}
+
+.blur {
+    border: 1px solid red;
+    border-radius: 4px; 
+}
+
+.anime {
+    transform: translateY(-140%);
+    padding: 0px 3px 0px 5px;
+    background-color: white; 
+    font-size: x-small;
+    font-weight:lighter;
+    margin-left: 11px;
+    color: darkcyan;
+}
+.animeX {
+    transform: translateY(-140%);
+    padding: 0px 3px 0px 5px;
+    background-color: white; 
+    font-size: x-small;
+    font-weight:lighter;
+    margin-left: 11px;
+    color: red;
+}
+
+.error {
+    position: absolute;
+    top: 52px;
+    right: 4px;
+    font-size: x-small;
+    font-weight: 100;
+    font-style: italic;
+    color: red;
+
+}
+
+
+    /* FOOTER SECTION */
+.footer{
+    padding: 40px 0px;
+    font-size: smaller;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    }
+    
+
