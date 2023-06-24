@@ -27,7 +27,7 @@ body {
     top: -2px;
     left: -2px;
     position: absolute;
-    transition: width 1.5s ease-in ;
+    transition: width 50ms ease-in ;
 }
 .box::after {
     content: "";
@@ -37,6 +37,7 @@ body {
     top: -2px;
     right: -2px;
     position: absolute;
+    transition: height 50ms ease-in 50ms
 }
 
 .innerbox {
@@ -54,7 +55,7 @@ body {
     bottom: -2px;
     right: -2px;
     position: absolute;
-    transition: width 1.5s ease-in ;
+    transition: width 50ms ease-in 100ms;
 }
 .innerbox::after {
     content: "";
@@ -64,6 +65,7 @@ body {
     bottom: -2px;
     left: -2px;
     position: absolute;
+    transition: height 50ms ease-in 150ms
 }
 
 .box:hover::before {
